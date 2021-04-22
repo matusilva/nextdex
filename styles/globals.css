@@ -22,8 +22,7 @@ body {
 }
  
 .app > h1 {
-  text-align: center;
-  color: #ffffff;
+  color: #28AAFE;
   margin-bottom: 2rem;
   font-size: 2rem;
   text-transform: uppercase;
@@ -33,35 +32,32 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
   grid-gap: 1.5rem;
-  justify-content: center;
-  align-items: center;
 }
  
 .card {
-  width: 12rem auto;
+  width: auto;
   background: #DC0A2D;
   color: #e4c439;
   padding: 1rem;
   border-radius: 10px;
   border: 2.5px solid #89071C;
-  text-align: center;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   position: relative;
   overflow: hidden;
-  cursor: pointer;
   transition: 0.2s ease-in-out all;
+  text-align: center;
 }
 
 .card-pokedex {
   background: #DEDEDE;
-  color: #e4c439;
+  color: #232323;
   padding: 1rem;
   border-radius: 10px;
   border: 2px solid #232323;
   position: relative;
   overflow: hidden;
-  cursor: pointer;
   transition: 0.2s ease-in-out all;
+  text-align: center;
 }
  
 .card:hover {
@@ -81,6 +77,7 @@ body {
   left: 0;
   z-index: 1;
   border: 2.5px solid #DEDEDE;
+  text-align: center;
 }
 .card-name {
   text-transform: capitalize;
@@ -97,13 +94,40 @@ body {
  
 .card-details {
   font-size: 1.3rem;
-  color: #e4c439;
+  color: #232323;
 }
 
 .logo {
   text-align: center;
   width: auto;
   height: auto;
+}
+
+
+
+/* Pokemon/[id] */
+.type-colors {
+    width: 7.5rem;
+    height: 2.5rem;
+    color: #fff;
+    padding: 0.3rem;
+    font-weight: 700;
+    margin:5px;
+    border-radius: 10px;
+}
+
+.card-pokemon {
+  width: auto;
+  background: #DC0A2D;
+  color: #DEDEDE;
+  padding: 1rem;
+  border-radius: 10px;
+  border: 2.5px solid #89071C;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  position: relative;
+  overflow: hidden;
+  transition: 0.2s ease-in-out all;
+  text-align: justify;
 }
 
 @media screen and (max-width: 600px) {
