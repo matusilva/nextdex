@@ -107,13 +107,11 @@ body {
 
 /* Pokemon/[id] */
 .type-colors {
-    width: 7.5rem;
-    height: 2.5rem;
     color: #fff;
-    padding: 0.3rem;
-    font-weight: 700;
+    padding: 0.5rem;
     margin:5px;
     border-radius: 10px;
+    text-align: center;
 }
 
 .card-pokemon {
@@ -130,6 +128,17 @@ body {
   text-align: justify;
 }
 
+.row {
+  float: left;
+}
+
+.horizontal-chart {
+  max-width: 500px;
+  max-height: 400px;
+  margin-left: 350px;
+}
+
+
 @media screen and (max-width: 600px) {
   .card{
     width: 100%;
@@ -137,5 +146,12 @@ body {
   
   .logo{
     width: 100%;
+  }
+  .row {
+    float: none;
+  }
+  .horizontal-chart {
+    margin-left: auto;
+    float: right;
   }
 }

@@ -1,6 +1,7 @@
-import React from 'react'
+import React from "react";
 import axios from 'axios'
 import Link from 'next/link'
+import Chart from '../../components/Chart'
 
 const type_colors = {
   bug: '#B1C12E',
@@ -37,42 +38,45 @@ const Pokemon = ({ poke }) => {
         <div className='card-pokemon'>
           <span className='card-id'>{poke.id}</span>
           <div className='card-pokedex'>
-            <img
-              src={poke.sprites.front_default}
-              alt={poke.name}
-            />
-            <img
-              src={poke.sprites.back_default}
-              alt={poke.name}
-            />
-            <img
-              src={poke.sprites.front_shiny}
-              alt={poke.name}
-            />
-            <img
-              src={poke.sprites.back_shiny}
-              alt={poke.name}
-            />
-            <h2 className='card-details'>{poke.name}</h2>
-            <br></br>
+            <div className='row'>
+              <h2 className='card-details'>{poke.name}</h2>
+              <img
+                src={poke.sprites.front_default}
+                alt={poke.name}
+              />
+              <img
+                src={poke.sprites.back_default}
+                alt={poke.name}
+              />
+              <h2 className='card-details'>Versão shiny</h2>
+              <img
+                src={poke.sprites.front_shiny}
+                alt={poke.name}
+              />
+              <img
+                src={poke.sprites.back_shiny}
+                alt={poke.name}
+              />
+              <h2 className='card-details'>Tipo</h2>
+              <br />
+              {poke.types.map((type) => (
+                <span className='type-colors' key={type} style={{ background: `${type_colors[type.type.name]}` }}>
+                  {type.type.name}
+                </span>
+              ))}
+            </div>
             <div>
-              <h2 className='card-details'>
-                {poke.types.map((type) => (
-                  <span className='type-colors' key={type} style={{ background: `${type_colors[type.type.name]}` }}>
-                    {type.type.name}
-                  </span>
-                ))}
-              </h2>
+              <h4 className='card-details'>Altura</h4> {poke.height}
+              <h4 className='card-details'>Peso</h4> {poke.weight}
+              <h4 className='card-details'>Abilidade</h4>
+              {poke.abilities.map((ability) => (
+                <p>
+                  {ability.ability.name}
+                </p>
+              ))}
+              <Chart poke={poke} />
             </div>
           </div>
-          <h4>Altura:</h4> {poke.height}
-          <h4>Peso:</h4> {poke.weight}
-          <h4>Abilidade:</h4>
-          {poke.abilities.map((ability) => (
-            <p>
-              {ability.ability.name}
-            </p>
-          ))}
         </div>
       </div>
     </main>
