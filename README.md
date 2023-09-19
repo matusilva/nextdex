@@ -4,7 +4,7 @@ Construindo uma Pokédex consumindo a api [PokéAPI](https://pokeapi.co/)
 ### Demonstração da aplicação 
 A aplicação está hospedada na Vercel. Acesse abaixo:
 
-<a href="https://nextdex-blush.vercel.app/"><img src="https://img.shields.io/badge/Vercel-NextDex-%23FF0000?style=for-the-badge&logo=vercel"/></a>
+<a href="https://nextdex-app.vercel.app/"><img src="https://img.shields.io/badge/Vercel-NextDex-%23FF0000?style=for-the-badge&logo=vercel"/></a>
 
 
 ### 🛠 Tecnologias
